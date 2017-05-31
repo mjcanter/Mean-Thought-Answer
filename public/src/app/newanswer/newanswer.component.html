@@ -1,0 +1,13 @@
+{{ thought.question}}
+<form (submit)="onNewanswer()">
+<p>New Answer</p>
+    <input type="text" name="text"  
+    minlength="4" 
+    [(ngModel)]="answer.text"
+    #first_name='ngModel'>
+    <input type="text" name="support"  
+    minlength="4" 
+    [(ngModel)]="answer.support"
+    #first_name='ngModel'>
+    <input type="submit">
+</form>

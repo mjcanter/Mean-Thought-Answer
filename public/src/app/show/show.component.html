@@ -1,0 +1,11 @@
+<h1>
+{{thought.question}}
+</h1>
+<form (submit)="onLike()">
+<p *ngFor='let answer of thought.answers'>
+{{ answer.text }} {{ answer.like }}
+</p>
+</form>
+<a [routerLink]="['/answer', thought._id]">Answer this!</a>
+<a [routerLink]="['/new']">New Thought!</a>
+<a [routerLink]="['/dashboard']">Home</a>

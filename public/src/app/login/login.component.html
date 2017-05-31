@@ -1,0 +1,7 @@
+<form (submit)="updateUser()">
+    <input type="text" name="username" 
+    [(ngModel)]="username"
+    minlength="2" 
+    #user='ngModel'>
+    <input type="submit">
+</form>

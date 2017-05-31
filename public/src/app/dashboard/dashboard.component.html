@@ -1,0 +1,14 @@
+<p> Hi {{ user }} <a [routerLink]="['/login']">logout</a></p>
+<h1>Dashboard<h2>
+<p>All thoughts in the registry</p>
+
+
+
+<p *ngFor='let thought of thoughts'>
+{{thought.question}} answer#: {{ thought.answers.length }} last update: {{ thought.updatedAt | date:
+'medium' }}
+  <a [routerLink]="['/show', thought._id]">show</a> <a [routerLink]="['/answer', thought._id]">Answer</a> <a [routerLink]="['/delete', thought._id]">delete</a>
+}
+}
+</p>
+<a [routerLink]="['/new']">Add a deep thought</a>

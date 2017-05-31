@@ -1,0 +1,13 @@
+<form (submit)="onSubmit()">
+<p>Deep Thought</p>
+    <input type="text" name="question"  
+    minlength="10" 
+    [(ngModel)]="thought.question"
+    #question='ngModel'>
+<p>Description</p>
+    <input type="text" name="description" 
+    [(ngModel)]="thought.description"
+    #description='ngModel'> 
+    <input type="submit">
+</form>
+<a [routerLink]="['/dashboard']">Home</a>
