@@ -15,7 +15,6 @@ app.set('view engine', 'ejs');*/
 require('./server/config/mongoose.js');
 
 ///routes ///
-
 var routes = require('./server/config/routes.js')(app);
 
 
